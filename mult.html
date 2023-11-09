@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MultiTrack Test</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <script src="https://unpkg.com/wavesurfer-multitrack@0.2/dist/multitrack.min.js"></script>
+
+
+
+  <div style="margin: 2em ">
+    <label>
+      Zoom: <input type="range" min="10" max="1000" value="400" />
+    </label>
+    <button id="play">Play</button>
+    <button id="forward">Forward 30s</button>
+    <button id="backward">Back 30s</button>
+  </div>
+
+  <div class="main">
+    <div class="track-control">
+      <div id="" class="track">track1</div>
+      <div id="" class="track">track2</div>
+      <div id="" class="track">track3</div>
+      <div id="" class="track">track4</div>
+      <div id="" class="track">track5</div>
+    </div>
+
+    <div id="container" style="background: #2d2d2d; color: #fff; width: 100%; overflow: hidden;"></div>
+  </div>
+  <a href="/index.html">player Test</a>
+  <script src="/mult.js"></script>
+</body>
+
+</html>

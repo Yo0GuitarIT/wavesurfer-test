@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audio Test</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+  <player id="containerBox">
+    <div id="waveform"></div>
+  </player>
+
+  <div class="controller">
+
     <h1>Audio Test</h1>
-    <player id="containerBox" class="containerBox">
-      <!-- <div id="waveform"></div> -->
-      <button id="playButton">播放</button>
-      <input
-        type="range"
-        id="volumeSlider"
-        min="0"
-        max="100"
-        step="1"
-        value="100"
-      />
+    <button id="stopButton">停止</button>
 
-      <input
-        type="range"
-        id="widthSlider"
-        min="100"
-        max="3000"
-        step="10"
-        value="800"
-      />
+    <button id="playButton">播放</button>
 
-      <input type="file" id="fileInput" />
-      <button id="loadButton">載入音訊</button>
-    </player>
-    <script type="module" src="/record.js"></script>
-  </body>
+    <label for="volumeSlider">音量</label>
+    <input type="range" id="volumeSlider" min="0" max="100" step="1" value="100" />
+
+    <label for="widthSlider">縮放大小</label>
+    <input type="range" id="widthSlider" min="0" max="1000" step="10" value="400" />
+
+    <input type="file" id="fileInput" />
+    <button id="loadButton">載入音訊</button>
+
+    <a href="/mult.html">MultiTrack</a>
+
+  </div>
+
+  
+  <!-- <label>
+    Zoom: <input type="range" min="10" max="100" value="10" />
+  </label>
+  
+  <div style="margin: 2em 0">
+    <button id="play">Play</button>
+    <button id="forward">Forward 30s</button>
+    <button id="backward">Back 30s</button>
+  </div> -->
+  
+  <div id="container" style="background: #2d2d2d; color: #fff"></div>
+
+  <script type="module" src="/record.js"></script>
+
+</body>
+
 </html>
